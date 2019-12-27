@@ -1,3 +1,6 @@
+# ターミナルでconda起動は「conda activate base」
+# コメントアウトの方法は「ctrl+/」
+
 from flask import Flask
 app = Flask(__name__)
  
