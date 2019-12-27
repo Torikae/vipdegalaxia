@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    <head>
+        <title>GalaxiaRPG PC作成ツール</title>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex,nofollow">
+    </head>
+
+    <body>
+        <header>
+            <div class="header_header">
+                <h1>GalaxiaRPG PC管理所</h1>
+            </div>
+
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="">リスト</a></li>
+                    <li><a href="">新規登録</a></li>
+                    <li><input type="text" name="keyword_PCname" placeholder="PC名orタグで検索" autocomplete="off"><input type="submit" value="検索"></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="rightContents">
+                <section class="main_pcInfo">
+                    <div class="title">
+                        <h2>キャラクター名（種族・メインクラス/サブクラス）</h2>
+                    </div>
+
+                    <div class="content">
+                        <p>タグなし</p>
+                    </div>
+                </section>
+
+                <section class="main_pcStates">
+                    <div class="title">
+                        <h2>種族・クラス・能力値</h2>
+                        <span class="show">表示</span>
+                        <span class="dishow">非表示</span>
+                    </div>
+
+                    <div class="content">
+                        <table class="pcStatesTable">
+                            <tbody>
+                                <tr>
+                                    <th nowrap="nowrap">種族</th>
+                                    <td>
+                                        <select id="raceId">
+                                            <option value="0" selected="selected"></option>
+                                            <option value="1">地球人</option>
+                                            <option value="2">強化人間</option>
+                                            <option value="3">人造人間</option>
+                                            <option value="4">アルヴィス</option>
+                                            <option value="5">リュシオン</option>
+                                            <option value="6">メリアイ</option>
+                                            <option value="7">ファンタズマ</option>
+                                        </select>
+                                    </td>
+                                    <th nowrap="nowrap">信条</th>
+                                    <td>
+                                        <input type="text" list="creed" placeholder="自由入力可" autocomplete="off">
+                                        <datalist id="creed">
+                                            <option value="拝金"></option>
+                                            <option value="野心"></option>
+                                            <option value="知識"></option>
+                                            <option value="無頼"></option>
+                                            <option value="厭世"></option>
+                                            <option value="復習"></option>
+                                            <option value="正義"></option>
+                                            <option value="博愛"></option>
+                                            <option value="守護"></option>
+                                            <option value="義務"></option>
+                                            <option value="忠誠"></option>
+                                            <option value="誇り"></option>
+                                            <option value="宿業"></option>
+                                            <option value="殉教"></option>
+                                            <option value="求道"></option>
+                                            <option value="修羅"></option>
+                                            <option value="銃狂"></option>
+                                            <option value="殺戮"></option>
+                                        </datalist>
+                                    </td>
+                                    <th nowrap="nowrap">最大LP</th>
+                                    <th nowrap="nowrap">最大SP</th>
+                                    <th nowrap="nowrap">初期Ft</th>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">メイン</th>
+                                    <td>
+                                        <select id="mainClassId">
+                                            <option value="0" selected="selected"></option>
+                                            <option value="1">アタッカー</option>
+                                            <option value="2">ファイター</option>
+                                            <option value="3">ガンナー</option>
+                                            <option value="4">スカウター</option>
+                                            <option value="5">エンジニア</option>
+                                            <option value="6">コマンダー</option>
+                                        </select>
+                                    </td>
+                                    <th nowrap="nowrap">サブ</th>
+                                    <td>
+                                        <select id="subClassId">
+                                            <option value="0" selected="selected"></option>
+                                            <option value="1">アタッカー</option>
+                                            <option value="2">ファイター</option>
+                                            <option value="3">ガンナー</option>
+                                            <option value="4">スカウター</option>
+                                            <option value="5">エンジニア</option>
+                                            <option value="6">コマンダー</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap"></th>
+                                    <th nowrap="nowrap">敏捷</th>
+                                    <th nowrap="nowrap">気力</th>
+                                    <th nowrap="nowrap">体力</th>
+                                    <th nowrap="nowrap">知力</th>
+                                    <th nowrap="nowrap">技術</th>
+                                    <th nowrap="nowrap">操作</th>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">種族値</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">成長　TL<input type="number"></th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">スキル補正</th>
+                                    <td><input type="checkbox"><input type="checkbox"><input type="number"></td>
+                                    <td><input type="checkbox"><input type="checkbox"><input type="number"></td>
+                                    <td><input type="checkbox"><input type="checkbox"><input type="number"></td>
+                                    <td><input type="checkbox"><input type="checkbox"><input type="number"></td>
+                                    <td><input type="checkbox"><input type="checkbox"><input type="number"></td>
+                                    <td><input type="checkbox"><input type="checkbox"><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">その他補正</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">合計</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap"></th>
+                                    <th nowrap="nowrap">RAC</th>
+                                    <th nowrap="nowrap">CTL</th>
+                                    <th nowrap="nowrap">VIT</th>
+                                    <th nowrap="nowrap">PSY</th>
+                                    <th nowrap="nowrap">SIT</th>
+                                    <th nowrap="nowrap">MEC</th>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">基本値</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">クラス補正</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">スキル補正</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">その他補正</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">合計</th>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                    <td><input type="number"></td><td><input type="number"></td><td><input type="number"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>        
+                </section>
+
+                <section class="main_pcSkill">
+                    <div class="title">
+                        <h2>スキル</h2>
+                        <span class="show">表示</span>
+                        <span class="dishow">非表示</span>
+                    </div>
+                    <div class="content">
+                        <table class="pcSkillTable">
+                            <tbody>
+                                <tr>
+                                    <th nowrap="nowrap">残り習得枠／習得可能枠</th>
+                                    <td><input type="number">/<input type="number"></td>
+                                    <th nowrap="nowrap">残り一般枠</th>
+                                    <td><input type="number"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">適用</th>
+                                    <th nowrap="nowrap">スキル名</th>
+                                    <th nowrap="nowrap">SLv</th>
+                                    <th nowrap="nowrap">分類</th>
+                                    <th nowrap="nowrap">種類別</th>
+                                    <th nowrap="nowrap">習得条件</th>
+                                    <th nowrap="nowrap">消費</th>
+                                    <th nowrap="nowrap">射程</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>
+                                        <select id="SkillId">
+                                            <option value="0" selected="selected">スキルを選択しろ</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="number"></td><td><input type="text"></td>
+                                    <td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th nowrap="nowrap">効果</th>
+                                    <td colspan="6"><input type="text"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" value="+増加"><input type="submit" value="-減少">
+                    </div>
+                </section>
+            </div>
+
+            <div class="leftContents">
+                保存とか
+            </div>
+        </main>
+
+        <footer>
+            footer
+        </footer>
+    </body>
+</html>
